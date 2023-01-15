@@ -468,6 +468,14 @@ define Device/wrtnode2r
 endef
 TARGET_DEVICES += wrtnode2r
 
+define Device/miwifi-3a
+  DTS := MIWIFI-3A
+  IMAGE_SIZE := 15104k
+  DEVICE_TITLE := Xiaomi MiWiFi 3a
+  DEVICE_PACKAGES := kmod-mt76x2
+endef
+TARGET_DEVICES += miwifi-3a
+
 define Device/xiaomi_mir4a-100m
   DTS := XIAOMI-MIR4A-100M
   IMAGE_SIZE := 14976k

@@ -147,8 +147,8 @@ static void __init tl_ap121_setup(void)
 	ath79_init_mac(ath79_eth1_data.mac_addr, mac, -1);
 
 	ath79_register_mdio(0, 0x0);
-	ath79_register_eth(1);
 	ath79_register_eth(0);
+	ath79_register_eth(1);
 
 	ath79_register_wmac(ee, mac);
 }

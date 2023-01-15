@@ -103,7 +103,6 @@ ramips_setup_interfaces()
 	kn|\
 	kn_rc|\
 	mac1200rv2|\
-	miwifi-nano|\
 	mt7621|\
 	mt7628|\
 	mtc,wr1201|\
@@ -144,6 +143,10 @@ ramips_setup_interfaces()
 	zbt-wr8305rt)
 		ucidef_add_switch "switch0" \
 			"0:lan" "1:lan" "2:lan" "3:lan" "4:wan" "6@eth0"
+		;;
+	miwifi-3a)
+		ucidef_add_switch "switch0" \
+			"4:lan:1" "2:lan:2" "0:wan" "6@eth0"
 		;;
 	gehua,ghl-r-001)
 		ucidef_add_switch "switch0" \
@@ -337,7 +340,10 @@ ramips_setup_interfaces()
 		ucidef_add_switch "switch1" \
 			"1:lan" "2:lan" "3:lan" "4:lan" "0:wan" "6@eth0"
 		;;
-	hc5661|\
+	hc5661)
+		ucidef_add_switch "switch0" \
+			"0:lan" "1:lan" "4:wan" "6@eth0"
+		;;	
 	head-weblink,hdrm200|\
 	y1s)
 		ucidef_add_switch "switch0" \

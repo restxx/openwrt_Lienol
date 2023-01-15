@@ -295,6 +295,9 @@ ramips_board_detect() {
 	*"MiWiFi Nano")
 		name="miwifi-nano"
 		;;
+	*"MiWiFi 3a")
+		name="miwifi-3a"
+		;;		
 	*"MLW221")
 		name="mlw221"
 		;;

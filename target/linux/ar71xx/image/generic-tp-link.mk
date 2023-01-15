@@ -347,6 +347,19 @@ define Device/tl-wdr4900-v2
 endef
 TARGET_DEVICES += tl-wdr4900-v2
 
+define Device/tl-wdr5600-v1
+  $(Device/tplink-16mlzma)
+  DEVICE_TITLE := TP-LINK TL-WDR5600 v1
+  DEVICE_PACKAGES := kmod-ath10k ath10k-firmware-qca9887
+  KERNEL := kernel-bin | patch-cmdline | lzma | uImage lzma
+  KERNEL_INITRAMFS := kernel-bin | patch-cmdline | lzma | uImage lzma | tplink-v1-header
+  BOARDNAME := TL-WDR5600-v1
+  DEVICE_PROFILE := TLWDR5600V1
+  TPLINK_HWID := 0x56000001
+  TPLINK_HEADER_VERSION := 2
+endef
+TARGET_DEVICES += tl-wdr5600-v1
+
 define Device/tl-wdr6500-v2
   $(Device/tplink-8mlzma)
   DEVICE_TITLE := TP-LINK TL-WDR6500 v2
@@ -482,6 +495,15 @@ define Device/tl-wr810n-v2
 endef
 TARGET_DEVICES += tl-wr810n-v2
 
+define Device/tl-wr841-v9
+    $(Device/tplink-16mlzma)
+    DEVICE_TITLE := TP-LINK TL-WR841N/ND v9
+    BOARDNAME := TL-WR841N-v9
+    DEVICE_PROFILE := TLWR841
+    TPLINK_HWID := 0x08410009
+endef
+TARGET_DEVICES += tl-wr841-v9
+
 define Device/tl-wr842n-v1
   $(Device/tplink-8m)
   DEVICE_TITLE := TP-LINK TL-WR842N/ND v1
@@ -493,7 +515,7 @@ endef
 TARGET_DEVICES += tl-wr842n-v1
 
 define Device/tl-wr842n-v2
-  $(Device/tplink-8mlzma)
+  $(Device/tplink-16mlzma)
   DEVICE_TITLE := TP-LINK TL-WR842N/ND v2
   DEVICE_PACKAGES := kmod-usb-core kmod-usb2 kmod-usb-ledtrig-usbport
   BOARDNAME := TL-WR842N-v2

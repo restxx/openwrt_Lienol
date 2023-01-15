@@ -384,7 +384,7 @@ endef
 TARGET_DEVICES += tl-wr720n-v4
 
 define Device/tl-wr740n-v1
-  $(Device/tplink-4m)
+  $(Device/tplink-16mlzma)
   DEVICE_TITLE := TP-LINK TL-WR740N/ND v1
   BOARDNAME := TL-WR741ND
   DEVICE_PROFILE := TLWR740
@@ -400,7 +400,7 @@ endef
 TARGET_DEVICES += tl-wr740n-v3
 
 define Device/tl-wr740n-v4
-  $(Device/tplink-4mlzma)
+  $(Device/tplink-16mlzma)
   DEVICE_TITLE := TP-LINK TL-WR740N/ND v4
   BOARDNAME := TL-WR741ND-v4
   DEVICE_PROFILE := TLWR740
@@ -616,6 +616,15 @@ define Device/tl-wr847n-v8
 endef
 TARGET_DEVICES += tl-wr847n-v8
 
+define Device/tl-wr886n-v5
+  $(Device/tplink-16mlzma)
+  DEVICE_TITLE := TP-LINK TL-WR886N v5
+  BOARDNAME := TL-WR886N-v5
+  DEVICE_PROFILE := TLWR941
+  TPLINK_HWID := 0x08860005
+endef
+TARGET_DEVICES += tl-wr886n-v5
+
 define Device/tl-wr940n-v4
   $(Device/tplink-4mlzma)
   DEVICE_TITLE := TP-LINK TL-WR940N v4
@@ -680,7 +689,7 @@ endef
 TARGET_DEVICES += tl-wr941nd-v5
 
 define Device/tl-wr941nd-v6
-  $(Device/tplink-4mlzma)
+  $(Device/tplink-16mlzma)
   DEVICE_TITLE := TP-LINK TL-WR941N/ND v6
   BOARDNAME := TL-WR941ND-v6
   DEVICE_PROFILE := TLWR941
